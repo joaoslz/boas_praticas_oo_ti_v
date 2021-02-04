@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Pagamentos {
+public class Pagamentos  {
 
     private double valorPago;
 
@@ -10,6 +10,7 @@ public class Pagamentos {
     public double getValorPago() {
         return this.valorPago;
     }
+
     private void paga(double valor) {
         if (valor < 0) {
             throw new IllegalArgumentException("Valor invalido para pagamento");
@@ -34,6 +35,7 @@ public class Pagamentos {
         }
         return pagamentosFiltrados;
     }
+
     public ArrayList<Pagamento> pagamentosComValorMaiorQue(double valorMinimo) {
         ArrayList<Pagamento> pagamentosFiltrados = new ArrayList<Pagamento>();
         for (Pagamento pagamento : this.pagamentos) {
@@ -43,6 +45,7 @@ public class Pagamentos {
         }
         return pagamentosFiltrados;
     }
+
     public ArrayList<Pagamento> pagamentosDo(String cnpjPagador) {
         ArrayList<Pagamento> pagamentosFiltrados = new ArrayList<Pagamento>();
         for (Pagamento pagamento : this.pagamentos) {
@@ -52,9 +55,4 @@ public class Pagamentos {
         }
         return pagamentosFiltrados;
     }
-
-
-
-
-
 }
