@@ -1,14 +1,20 @@
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class Pagamentos  {
 
     private double valorPago;
 
-    private ArrayList<Pagamento> pagamentos = new ArrayList<Pagamento>();
+    private List<Pagamento> pagamentos = new ArrayList<Pagamento>();
 
     public double getValorPago() {
         return this.valorPago;
+    }
+
+
+    public Iterable<Pagamento> getPagamentos() {
+        return pagamentos;
     }
 
     private void paga(double valor) {

@@ -10,9 +10,6 @@ public class TestePagamentos {
         pagamento.setValor(1000 );
 
         pagamentos.registra(pagamento );
-        pagamentos.add(pagamento );
-
-        pagamentos.clear();
 
     }
 }
